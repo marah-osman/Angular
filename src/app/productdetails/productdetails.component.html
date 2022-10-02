@@ -1,0 +1,15 @@
+YOU SELECT PROUDUCT WITH ID = 
+{{prod.id}}
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src={{prod.img}} alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{prod.name}}</h5>
+      <div class="card-text">
+        <div>ID: {{prod.id}}</div>
+        <div>Price: {{prod.price}}</div>
+        <div>Quantity: {{prod.quantity}}</div>
+    </div>
+    <button class="btn btn-primary" (click)=" goBack()" >Go back</button>
+  </div>
+</div>
+<br><br>

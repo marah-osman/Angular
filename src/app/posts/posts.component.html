@@ -1,0 +1,26 @@
+<br>
+<table class="table table-bordered">
+  <thead>
+    <tr class="bg-dark text-white">
+      <th>ID</th>
+      <th>Title</th>
+      <th>Body</th>
+      <th></th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <!-- [hidden] = "prd.Quantity === 0"  -->
+    <!-- [class.bg-primary] = "prd.Quantity === 0" -->
+    <tr *ngFor="let prd of postslist">
+      <td>{{prd.id}}</td>
+      <td>{{prd.title}}</td>
+      <td>{{prd.body}}</td>
+      <td><button type="button" class="btn btn-secondary" (click)="goTopostcomments(prd.id)" >Comments</button></td>
+       <!-- (click)="getcomment(prd.id)" -->
+   
+    </tr>
+  </tbody>
+</table>
+<br>
+

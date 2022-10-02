@@ -1,0 +1,64 @@
+<h1>Our categories and Products</h1>
+<br>
+<label for="prdCat" class="form-label">Category:</label>
+<select class="form-control" name="cat" id="prdCat"  >
+  <option value="0" selected>All</option>
+  <option *ngFor="let cat of CategoryList" [value]="cat.id">{{cat.name}}</option>
+</select>
+<br>
+<br>
+Enter your name:<input type="text"  [(ngModel)]="clientName" />
+
+<!-- {{clientName}}  -->
+
+<br>
+<br>
+
+<!-- <div *ngIf="clicked; then thenblock ; else elseblock">
+
+</div>
+<div >
+ <ng-template #thenblock>
+    <h2>Thanks for purchasing from our store {{clientName}}</h2>
+ </ng-template>
+</div>
+
+<div>
+<ng-template #elseblock> -->
+<table class="table table-bordered" *ngIf="IsPurshased">
+  <thead>
+    <tr class="bg-dark text-white">
+      <th scope="col">No.</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Av. Quantity</th>
+      <th scope="col">Image</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pro of ProductList">
+      <th>{{pro.id}}</th>
+      <th>{{pro.name}}</th>
+      <th>{{pro.price}} </th>
+      <th>{{pro.quantity}}</th>
+      <th><img [src] ="pro.img" width="90px"></th>
+     <th><button type="button" class="btn btn-secondary"  (click)="goToproductdetails((pro.id))" >Details</button></th>
+        <!-- <td><a [routerLink]="['/Product/', prd.ID]" class="btn btn-primary">View details</a></td> -->
+    </tr>
+  </tbody>
+</table>
+<!-- </ng-template>
+</div> -->
+<br>
+<br>
+<button type="button" class="btn btn-secondary" (click)="clicked()" style="text-align: center;">Buy</button>
+
+<div *ngIf="!IsPurshased" >
+ 
+     <h2>Thanks for purchasing from our store {{clientName}}</h2>
+
+ </div>
+
+
+   

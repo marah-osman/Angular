@@ -1,0 +1,25 @@
+
+<br>
+<table class="table table-bordered">
+  <thead>
+    <tr class="bg-dark text-white">
+      <th>Name</th>
+      <th>USerName</th>
+      <th>Eamil</th>
+     
+    </tr>
+  </thead>
+  <tbody>
+    <!-- [hidden] = "prd.Quantity === 0"  -->
+    <!-- [class.bg-primary] = "prd.Quantity === 0" -->
+    <tr *ngFor="let prd of userslist">
+      <td>{{prd.name}}</td>
+      <td>{{prd.username}}</td>
+      <td>{{prd.email}}</td>
+      <!-- <td><a [routerLink]="['/Product/', prd.ID]" class="btn btn-primary">View details</a></td> -->
+    </tr>
+  </tbody>
+</table>
+<br>
+
+

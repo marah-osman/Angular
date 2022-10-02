@@ -1,0 +1,11 @@
+<div class="m-3 pt-3 pb-3" >
+    <h1> Welcom to our store   {{Storename|uppercase}} </h1>
+    <img [src]='Storelogo' height="500" width="1000"/>
+    <br>
+    <br>
+    <h3 *ngIf=" Discount !== 'noDiscount'" >We offer an explicit discount of {{Discount|percent}}</h3>
+    </div>
+    <br>
+    <br>
+    <br>
+   
